@@ -1,7 +1,7 @@
 public class DiceGame {
 
         public static void main(String[] args) {
-
+             // creating objects with different constructors
             System.out.println("Creating a default d6...");
             Die d6 = new Die();
             System.out.println("Creating a default d20...");
@@ -33,7 +33,7 @@ public class DiceGame {
             System.out.println("BONUS");
             System.out.println("_ _ _ _ ");
             System.out.println("\n");
-
+// creating five dices with six sides
             Die[] dices = new Die[5];
 
             System.out.println("Creating 5 d6");
@@ -52,23 +52,25 @@ public class DiceGame {
 
         }
     }
+// a class with basic properties, and constructors having different arguments
 class Die {
 
     private String name;
     private int sides;
     private int sideUp;
+        // constructor with one argument
     public Die() {
         name = "d6";
         sides = 6;
         roll();
     }
-
+// constructor with one arguments
     public Die(int sides) {
         this.sides = sides;
         name = "d" + sides;
         roll();
     }
-
+// constructor with two arguments
     public Die(int sides, int sideUp) {
         this.sides = sides;
         name = "d" + sides;
